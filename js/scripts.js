@@ -94,6 +94,11 @@ function showOptions(buttonClick){
 
 document.getElementById("start-button").addEventListener("click", showOptions);
 
+function writeSelections(){
+    var selections_div = document.getElementById("selections-status");
+    selections_div.innerHTML = "Method: "+ selections["method"] + " -> Test type: "+selections["test"]+ " -> Balance: "+selections["balance"]+ " -> Independence: "+selections["independence"]+ " -> Tails: "+selections["tails"]
+}
+
 
 function showCalculator(buttonClick){
     document.getElementById("selection-page").classList.add("hide-content");
@@ -101,6 +106,11 @@ function showCalculator(buttonClick){
     document.getElementById("calculation-page").classList.remove("hide-content");
     document.getElementById("calculate-participants").disabled = false;
 
+    console.log("hi there");
+    console.log(selections);
+    writeSelections();
+
+    
 
     // set default values of the power metrics here
  //   document.getElementById("effect-size").value = "0.5";
@@ -274,8 +284,7 @@ function optionOut(event){
 }
 
 function optionClick(event){
-    event.target.classList.add("option-over");
-    event.target.setAttribute("data-selected", "true");
+
     
     // the names of the data parameters in "selections" variable are intentionally the same as
     // the names of each list's "id" attribute, which lets following be very concise
@@ -283,9 +292,19 @@ function optionClick(event){
     // This means we can offload the work of determining when all the necessary selections have been made
     // to a separate function that will check every time something is clicked whether a button has been missed
     containingList = event.target.parentElement.id;
+    parent_list = document.getElementById(containingList);
+    if(parent_list){
+        items_list = parent_list.getElementsByTagName("button");
+        for (i=0; i<items_list.length; i++){
+            items_list[i].classList.remove("option-over");
+            items_list[i].setAttribute("data-selected", "false");
+        }
+    }
+    event.target.classList.add("option-over");
+    event.target.setAttribute("data-selected", "true");
+
+
     selections[containingList] = event.target.id;
-    console.log("hi");
-    console.log(containingList);
     // need to customize the wrapper ID so that I can have a separate one for the ANOVA test later on
     // this will only work for T-test at the moment
     if(event.target.id == "T-test"){
@@ -312,6 +331,7 @@ function checkSelections(){
         && (selections["tails"] == "two-tail" || selections["tails"] == "one-tail")){
             testButton.disabled = false;
         }
+
 }
 
 
