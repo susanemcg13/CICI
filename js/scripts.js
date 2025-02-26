@@ -66,7 +66,6 @@ powerSlider.on("change", powerUpdate);
 
 
 function effectUpdate(sliderValue){
-    console.log("in update")
     console.log(sliderValue.newValue);
     powerMetrics["effect-size"] = sliderValue.newValue;
     document.getElementById("effect-size").innerHTML = "Effect size: "+sliderValue.newValue;
@@ -74,7 +73,6 @@ function effectUpdate(sliderValue){
 }
 
 function powerUpdate(sliderValue){
-    console.log("in update")
     console.log(sliderValue.newValue);
     powerMetrics["power"] = sliderValue.newValue;
     document.getElementById("power").innerHTML = "Power: "+sliderValue.newValue;
