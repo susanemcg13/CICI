@@ -93,10 +93,9 @@ TODO (in no particular order)
 
     <!-- MAIN LANDING PAGE CONTENT-->
     <div class="px-4 py-5 my-5 text-center" id="landing-page">
-      <h1 class="display-5 fw-bold text-body-emphasis">Welcome to the Recommender</h1>
+      <h1 class="display-5 fw-bold text-body-emphasis">Get a Sample Size Recommendation</h1>
       <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Here's some background about how this tool works. We can add additional detail as needed.
-        </p>
+        <p class="lead mb-4">Built by researchers specializing in study design, privacy, and usability, this tool will help you decide what sample size is right for your study.</p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
           <button type="button" class="btn btn-primary btn-lg px-4 gap-3" id="start-button">Get started</button>
           <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
@@ -114,7 +113,7 @@ TODO (in no particular order)
 
             <li>
               <div>
-                <span class="response-required">*</span><span></span>What method do you plan to use?
+                Which method best describes your overall study?
                 <!-- ? and ! icons on hold-->
                 <!-- <a>
                   <svg class="question-svg-align">
@@ -129,15 +128,15 @@ TODO (in no particular order)
               </div>
               <div class="list-group" id="method">
                 <button type="button" class="list-group-item list-group-item-action" id="survey" data-selected="false">
-                  A. Survey
+                  Survey
                 </button>
                 <button type="button" class="list-group-item list-group-item-action" id="experiment"
                   data-selected="false">
-                  B. Experiment
+                  Experiment
                 </button>
                 <button type="button" class="list-group-item list-group-item-action" id="interview"
                   data-selected="false" disabled>
-                  C. Interview <i>Not yet available</i>
+                  Interview <i>Not yet available</i>
                 </button>
                 <!-- <span class="d-inline-block" tabindex="0" data-placement="right" data-toggle="tooltip" title="Disabled tooltip">
                   <button type="button" class="list-group-item list-group-item-action" id="method-interview" disabled>
@@ -168,14 +167,12 @@ TODO (in no particular order)
               </div>
               <div class="list-group" id="test">
                 <button type="button" class="list-group-item list-group-item-action" id="T-test" data-selected="false">
-                  A. T-test
+                  T-test
                 </button>
                 <button type="button" class="list-group-item list-group-item-action" id="ANOVA" data-selected="false"
-                  disabled>B.
-                  ANOVA <i>Not yet available</i></button>
+                  disabled>ANOVA <i>Not yet available</i></button>
                 <button type="button" class="list-group-item list-group-item-action" id="other" data-selected="false"
-                  disabled>C.
-                  Other <i>Not yet available</i> </button>
+                  disabled>Other <i>Not yet available</i> </button>
 
               </div>
             </li>
@@ -203,10 +200,10 @@ TODO (in no particular order)
                   <div class="list-group" id="independence">
                     <button type="button" class="list-group-item list-group-item-action" id="independent"
                       data-selected="false">
-                      i. Independent T-test
+                      Independent T-test
                     </button>
                     <button type="button" class="list-group-item list-group-item-action" id="dependent"
-                      data-selected="false" disabled>ii. Dependent T-test</button>
+                      data-selected="false" disabled>Dependent T-test</button>
                   </div>
                 </li>
                 <!-- BALANCE -->
@@ -228,10 +225,10 @@ TODO (in no particular order)
                   <div class="list-group" id="balance">
                     <button type="button" class="list-group-item list-group-item-action" id="balance-yes"
                       data-selected="false">
-                      i. Yes, the groups are balanced
+                      Yes, the groups are balanced
                     </button>
                     <button type="button" class="list-group-item list-group-item-action" id="balance-no"
-                      data-selected="false" disabled>ii. No, the groups are not balanced</button>
+                      data-selected="false" disabled>No, the groups are not balanced</button>
                   </div>
                 </li>
                 <!-- ONE VS. TWO-TAILED -->
@@ -254,10 +251,10 @@ TODO (in no particular order)
                   <div class="list-group" id="tails">
                     <button type="button" class="list-group-item list-group-item-action" id="two-tail"
                       data-selected="false">
-                      i. Two-tailed test
+                      Two-tailed test
                     </button>
                     <button type="button" class="list-group-item list-group-item-action" id="one-tail"
-                      data-selected="false">ii. One-tailed test</button>
+                      data-selected="false">One-tailed test</button>
                   </div>
                 </li>
 
