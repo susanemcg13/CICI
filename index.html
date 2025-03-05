@@ -152,7 +152,7 @@ TODO (in no particular order)
             <!-- TESTS-->
             <li>
               <div>
-                <span class="response-required">*</span><span></span>What type of test do you plan do use?
+                Which statistical test do you need a sample size for?
                 <!-- ? and ! icons on hold-->
                 <!-- <a>
                   <svg class="question-svg-align">
@@ -184,7 +184,7 @@ TODO (in no particular order)
                 <!-- INDEPENDENCE -->
                 <li>
                   <div>
-                    <span class="response-required">*</span><span></span>2. A. Independent or dependent T-test?
+                    2. A. What type of t-test will you use?
                     <!-- ? and ! icons on hold-->
                     <!-- <a>
                       <svg class="question-svg-align">
@@ -200,16 +200,16 @@ TODO (in no particular order)
                   <div class="list-group" id="independence">
                     <button type="button" class="list-group-item list-group-item-action" id="independent"
                       data-selected="false">
-                      Independent T-test
+                      Independent samples T-test
                     </button>
                     <button type="button" class="list-group-item list-group-item-action" id="dependent"
-                      data-selected="false" disabled>Dependent T-test</button>
+                      data-selected="false" disabled>Dependent samples T-test</button>
                   </div>
                 </li>
                 <!-- BALANCE -->
                 <li>
                   <div>
-                    <span class="response-required">*</span><span></span>2. B. Are the two groups balanced?
+                    2. B. Is the size of the participant groups you are comparing equal?
                     <!-- ? and ! icons on hold-->
                     <!-- <a>
                       <svg class="question-svg-align">
@@ -225,16 +225,16 @@ TODO (in no particular order)
                   <div class="list-group" id="balance">
                     <button type="button" class="list-group-item list-group-item-action" id="balance-yes"
                       data-selected="false">
-                      Yes, the groups are balanced
+                      Yes, each group will have the same number of participants <b>[Recommended]</b>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action" id="balance-no"
-                      data-selected="false" disabled>No, the groups are not balanced</button>
+                      data-selected="false" disabled>No, there will be a different number of participants in each group</button>
                   </div>
                 </li>
                 <!-- ONE VS. TWO-TAILED -->
                 <li>
                   <div>
-                    <span class="response-required">*</span><span></span>2. C. Will you use a one-tailed or a two tailed
+                    2. C. Will you use a one-tailed or a two tailed
                     test?
                     <!-- ? and ! icons on hold-->
                     <!-- <a>
@@ -283,15 +283,7 @@ TODO (in no particular order)
       </div>
       <div class="row">
 
-        <!-- EFFECT SIZE -->
-        <div class="col-4">
-          <form>
-            <div id="effect-size">Effect size: 0.5</div><br>
-            <input id="effectSizeSlider" data-slider-id='ex1Slider' type="text" data-slider-min="0.2"
-              data-slider-max="0.8" data-slider-step="0.01" data-slider-value="0.5" />
-            <div id="effect-size-feedback"></div>
-          </form>
-        </div>
+
         <!-- ALPHA -->
         <div class="col-4">
           <form>
@@ -300,6 +292,16 @@ TODO (in no particular order)
             <div id="alpha-feedback"></div>
           </form>
         </div>
+       
+           <!-- EFFECT SIZE -->
+           <div class="col-4">
+            <form>
+              <div id="effect-size">Effect size: 0.5</div><br>
+              <input id="effectSizeSlider" data-slider-id='ex1Slider' type="text" data-slider-min="0.2"
+                data-slider-max="0.8" data-slider-step="0.01" data-slider-value="0.5" />
+              <div id="effect-size-feedback"></div>
+            </form>
+          </div>     
 
         <!-- POWER -->
         <div class="col-4">
